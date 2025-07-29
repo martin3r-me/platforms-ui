@@ -1,0 +1,74 @@
+// =========================================
+// Transitions & Animations (UI Core)
+// =========================================
+
+// Basis-Variablen (kannst du in dein globales Variables-File legen)
+$ui-transition-duration-fast: 150ms;
+$ui-transition-duration: 300ms;
+$ui-transition-duration-slow: 500ms;
+$ui-transition-ease: cubic-bezier(0.4, 0, 0.2, 1); // "Material Design"-ähnlich
+$ui-transition-ease-in: cubic-bezier(0.4, 0, 1, 1);
+$ui-transition-ease-out: cubic-bezier(0, 0, 0.2, 1);
+
+// Mixin für generische Transitions
+@mixin transition($properties: all, $duration: $ui-transition-duration, $timing: $ui-transition-ease) {
+  transition-property: $properties;
+  transition-duration: $duration;
+  transition-timing-function: $timing;
+}
+
+// Utility-Klassen
+.transition {
+  @include transition(all);
+}
+
+.transition-fast {
+  @include transition(all, $ui-transition-duration-fast);
+}
+
+.transition-slow {
+  @include transition(all, $ui-transition-duration-slow);
+}
+
+.transition-opacity {
+  @include transition(opacity);
+}
+
+.transition-transform {
+  @include transition(transform);
+}
+
+.transition-colors {
+  @include transition(color, $ui-transition-duration, $ui-transition-ease-out);
+  transition-property: color, background-color, border-color;
+}
+
+.transition-shadow {
+  @include transition(box-shadow);
+}
+
+// Dauer-spezifische Hilfsklassen
+.duration-150 { transition-duration: 150ms; }
+.duration-200 { transition-duration: 200ms; }
+.duration-300 { transition-duration: 300ms; }
+.duration-500 { transition-duration: 500ms; }
+
+// Easing-Varianten (optional als Hilfsklassen)
+.ease-in   { transition-timing-function: $ui-transition-ease-in; }
+.ease-out  { transition-timing-function: $ui-transition-ease-out; }
+.ease      { transition-timing-function: $ui-transition-ease; }
+
+// Hover-Fokus-Effekte (optional für Buttons, Links etc.)
+.hover-scale-up {
+  @include transition(transform);
+  &:hover {
+    transform: scale(1.03);
+  }
+}
+
+.hover-fade {
+  @include transition(opacity);
+  &:hover {
+    opacity: 0.8;
+  }
+}

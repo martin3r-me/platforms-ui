@@ -1,0 +1,320 @@
+/* ======================================================================
+   utilities.colors.scss – Color, Border, Opacity Utilities
+   Voraussetzung: Tokens in :root (siehe _tokens.scss)
+====================================================================== */
+
+/* ==== BACKGROUND UTILITIES ==== */
+
+/* Primary */
+.bg-primary      { background: var(--ui-primary) !important; }
+.bg-primary-5    { background: var(--ui-primary-5) !important; }
+.bg-primary-10   { background: var(--ui-primary-10) !important; }
+.bg-primary-20   { background: var(--ui-primary-20) !important; }
+.bg-primary-50   { background: var(--ui-primary-50) !important; }
+.bg-primary-60   { background: var(--ui-primary-60) !important; }
+.bg-primary-80   { background: var(--ui-primary-80) !important; }
+.bg-primary-90   { background: var(--ui-primary-90) !important; }
+
+/* Secondary */
+.bg-secondary    { background: var(--ui-secondary) !important; }
+.bg-secondary-5  { background: var(--ui-secondary-5) !important; }
+.bg-secondary-10 { background: var(--ui-secondary-10) !important; }
+.bg-secondary-20 { background: var(--ui-secondary-20) !important; }
+.bg-secondary-50 { background: var(--ui-secondary-50) !important; }
+.bg-secondary-60 { background: var(--ui-secondary-60) !important; }
+.bg-secondary-80 { background: var(--ui-secondary-80) !important; }
+.bg-secondary-90 { background: var(--ui-secondary-90) !important; }
+
+/* Success */
+.bg-success      { background: var(--ui-success) !important; }
+.bg-success-5    { background: var(--ui-success-5) !important; }
+.bg-success-10   { background: var(--ui-success-10) !important; }
+.bg-success-20   { background: var(--ui-success-20) !important; }
+.bg-success-50   { background: var(--ui-success-50) !important; }
+.bg-success-60   { background: var(--ui-success-60) !important; }
+.bg-success-80   { background: var(--ui-success-80) !important; }
+.bg-success-90   { background: var(--ui-success-90) !important; }
+
+/* Danger */
+.bg-danger       { background: var(--ui-danger) !important; }
+.bg-danger-5     { background: var(--ui-danger-5) !important; }
+.bg-danger-10    { background: var(--ui-danger-10) !important; }
+.bg-danger-20    { background: var(--ui-danger-20) !important; }
+.bg-danger-50    { background: var(--ui-danger-50) !important; }
+.bg-danger-60    { background: var(--ui-danger-60) !important; }
+.bg-danger-80    { background: var(--ui-danger-80) !important; }
+.bg-danger-90    { background: var(--ui-danger-90) !important; }
+
+/* Warning */
+.bg-warning      { background: var(--ui-warning) !important; }
+.bg-warning-5    { background: var(--ui-warning-5) !important; }
+.bg-warning-10   { background: var(--ui-warning-10) !important; }
+.bg-warning-20   { background: var(--ui-warning-20) !important; }
+.bg-warning-50   { background: var(--ui-warning-50) !important; }
+.bg-warning-60   { background: var(--ui-warning-60) !important; }
+.bg-warning-80   { background: var(--ui-warning-80) !important; }
+.bg-warning-90   { background: var(--ui-warning-90) !important; }
+
+/* Info */
+.bg-info         { background: var(--ui-info) !important; }
+.bg-info-5       { background: var(--ui-info-5) !important; }
+.bg-info-10      { background: var(--ui-info-10) !important; }
+.bg-info-20      { background: var(--ui-info-20) !important; }
+.bg-info-50      { background: var(--ui-info-50) !important; }
+.bg-info-60      { background: var(--ui-info-60) !important; }
+.bg-info-80      { background: var(--ui-info-80) !important; }
+.bg-info-90      { background: var(--ui-info-90) !important; }
+
+/* Black */
+.bg-black        { background: var(--ui-black) !important; }
+.bg-black-5      { background: var(--ui-black-5) !important; }
+.bg-black-10     { background: var(--ui-black-10) !important; }
+.bg-black-20     { background: var(--ui-black-20) !important; }
+.bg-black-50     { background: var(--ui-black-50) !important; }
+.bg-black-60     { background: var(--ui-black-60) !important; }
+.bg-black-80     { background: var(--ui-black-80) !important; }
+.bg-black-90     { background: var(--ui-black-90) !important; }
+
+/* White (bleibt ohne Abstufungen, nur Hauptfarbe) */
+.bg-white        { background: var(--ui-white) !important; }
+
+/* Muted */
+.bg-muted        { background: var(--ui-muted) !important; }
+.bg-muted-5      { background: var(--ui-muted-5) !important; }
+.bg-muted-10     { background: var(--ui-muted-10) !important; }
+.bg-muted-20     { background: var(--ui-muted-20) !important; }
+.bg-muted-50     { background: var(--ui-muted-50) !important; }
+.bg-muted-60     { background: var(--ui-muted-60) !important; }
+.bg-muted-80     { background: var(--ui-muted-80) !important; }
+.bg-muted-90     { background: var(--ui-muted-90) !important; }
+.bg-body         { background: var(--ui-body-bg) !important; }
+.bg-surface      { background: var(--ui-surface) !important; }
+
+
+/* ==== TEXT COLOR UTILITIES ==== */
+.text-primary      { color: var(--ui-primary) !important; }
+.text-secondary    { color: var(--ui-secondary) !important; }
+.text-success      { color: var(--ui-success) !important; }
+.text-danger       { color: var(--ui-danger) !important; }
+.text-warning      { color: var(--ui-warning) !important; }
+.text-info         { color: var(--ui-info) !important; }
+.text-black        { color: var(--ui-black) !important; }
+.text-white        { color: var(--ui-white) !important; }
+.text-muted        { color: var(--ui-muted) !important; }
+.text-body         { color: var(--ui-body-color) !important; }
+
+/* On-Colors (für Flächen mit entsprechender BG!) */
+.text-on-primary      { color: var(--ui-on-primary) !important; }
+.text-on-secondary    { color: var(--ui-on-secondary) !important; }
+.text-on-success      { color: var(--ui-on-success) !important; }
+.text-on-danger       { color: var(--ui-on-danger) !important; }
+.text-on-warning      { color: var(--ui-on-warning) !important; }
+.text-on-info         { color: var(--ui-on-info) !important; }
+.text-on-black        { color: var(--ui-on-black) !important; }
+.text-on-white        { color: var(--ui-on-white) !important; }
+.text-on-muted        { color: var(--ui-on-muted) !important; }
+
+
+// === COLOR MAP für Loop (basiert auf deinen Tokens!) ===
+$ui-colors: (
+  "primary":    var(--ui-primary),
+  "secondary":  var(--ui-secondary),
+  "success":    var(--ui-success),
+  "danger":     var(--ui-danger),
+  "warning":    var(--ui-warning),
+  "info":       var(--ui-info),
+  "black":      var(--ui-black),
+  "white":      var(--ui-white),
+  "muted":      var(--ui-muted),
+  "body":       var(--ui-body-color),
+);
+
+// === Seiten-Map für Loop ===
+$border-sides: (
+  "": "", // alle Seiten (keine Präfix)
+  "-top": "-top",
+  "-right": "-right",
+  "-bottom": "-bottom",
+  "-left": "-left"
+);
+
+// === Border-Width-Utilities ===
+.border-0   { border-width: 0 !important; }
+.border-1   { border-width: 1px !important; }
+.border-2   { border-width: 2px !important; }
+@each $side, $css in $border-sides {
+  .border#{$side}-0   { border#{$css}-width: 0 !important; }
+  .border#{$side}-1   { border#{$css}-width: 1px !important; }
+  .border#{$side}-2   { border#{$css}-width: 2px !important; }
+}
+
+// === Border-Color-Utilities (alle Seiten + einzeln pro Seite) ===
+@each $name, $value in $ui-colors {
+  .border-#{$name}        { border-color: #{$value} !important; }
+  .border-top-#{$name}    { border-top-color: #{$value} !important; }
+  .border-right-#{$name}  { border-right-color: #{$value} !important; }
+  .border-bottom-#{$name} { border-bottom-color: #{$value} !important; }
+  .border-left-#{$name}   { border-left-color: #{$value} !important; }
+}
+
+// === Border-Style-Utilities ===
+.border-solid  { border-style: solid !important; }
+.border-dashed { border-style: dashed !important; }
+.border-dotted { border-style: dotted !important; }
+@each $side, $css in $border-sides {
+  .border#{$side}-solid  { border#{$css}-style: solid !important; }
+  .border#{$side}-dashed { border#{$css}-style: dashed !important; }
+  .border#{$side}-dotted { border#{$css}-style: dotted !important; }
+}
+
+/* ==== RADIUS UTILITIES ==== */
+.rounded-xs   { border-radius: var(--ui-radius-xs) !important; }
+.rounded-sm   { border-radius: var(--ui-radius-sm) !important; }
+.rounded-md   { border-radius: var(--ui-radius-md) !important; }
+.rounded-lg   { border-radius: var(--ui-radius-lg) !important; }
+.rounded-xl   { border-radius: var(--ui-radius-xl) !important; }
+.rounded-full { border-radius: var(--ui-radius-full) !important; }
+
+
+/* ==== SHADOW UTILITIES ==== */
+.shadow-xs   { box-shadow: var(--ui-shadow-xs) !important; }
+.shadow-sm   { box-shadow: var(--ui-shadow-sm) !important; }
+.shadow-md   { box-shadow: var(--ui-shadow-md) !important; }
+.shadow-lg   { box-shadow: var(--ui-shadow-lg) !important; }
+.shadow-none { box-shadow: none !important; }
+
+/* ==== HOVER SHADOW UTILITIES ==== */
+.hover\:shadow-xs:hover   { box-shadow: var(--ui-shadow-xs) !important; }
+.hover\:shadow-sm:hover   { box-shadow: var(--ui-shadow-sm) !important; }
+.hover\:shadow-md:hover   { box-shadow: var(--ui-shadow-md) !important; }
+.hover\:shadow-lg:hover   { box-shadow: var(--ui-shadow-lg) !important; }
+.hover\:shadow-none:hover { box-shadow: none !important; }
+
+/* ==== FOCUS SHADOW UTILITIES ==== (optional) */
+.focus\:shadow-xs:focus   { box-shadow: var(--ui-shadow-xs) !important; }
+.focus\:shadow-sm:focus   { box-shadow: var(--ui-shadow-sm) !important; }
+.focus\:shadow-md:focus   { box-shadow: var(--ui-shadow-md) !important; }
+.focus\:shadow-lg:focus   { box-shadow: var(--ui-shadow-lg) !important; }
+.focus\:shadow-none:focus { box-shadow: none !important; }
+
+
+/* ==== OPACITY UTILITIES ==== */
+.opacity-0   { opacity: 0 !important; }
+.opacity-5   { opacity: 0.05 !important; }
+.opacity-10  { opacity: 0.10 !important; }
+.opacity-20  { opacity: 0.20 !important; }
+.opacity-30  { opacity: 0.30 !important; }
+.opacity-40  { opacity: 0.40 !important; }
+.opacity-50  { opacity: 0.50 !important; }
+.opacity-60  { opacity: 0.60 !important; }
+.opacity-70  { opacity: 0.70 !important; }
+.opacity-80  { opacity: 0.80 !important; }
+.opacity-90  { opacity: 0.90 !important; }
+.opacity-100 { opacity: 1.00 !important; }
+
+/* ======================================================================
+   HOVER UTILITIES – alle Hauptfarben + on-Text (inkl. 60/80/90)
+====================================================================== */
+
+/* Primary */
+.hover\:bg-primary:hover      { background: var(--ui-primary) !important; }
+.hover\:bg-primary-5:hover    { background: var(--ui-primary-5) !important; }
+.hover\:bg-primary-10:hover   { background: var(--ui-primary-10) !important; }
+.hover\:bg-primary-20:hover   { background: var(--ui-primary-20) !important; }
+.hover\:bg-primary-50:hover   { background: var(--ui-primary-50) !important; }
+.hover\:bg-primary-60:hover   { background: var(--ui-primary-60) !important; }
+.hover\:bg-primary-80:hover   { background: var(--ui-primary-80) !important; }
+.hover\:bg-primary-90:hover   { background: var(--ui-primary-90) !important; }
+.hover\:text-primary:hover    { color: var(--ui-primary) !important; }
+.hover\:text-on-primary:hover { color: var(--ui-on-primary) !important; }
+
+/* Secondary */
+.hover\:bg-secondary:hover      { background: var(--ui-secondary) !important; }
+.hover\:bg-secondary-5:hover    { background: var(--ui-secondary-5) !important; }
+.hover\:bg-secondary-10:hover   { background: var(--ui-secondary-10) !important; }
+.hover\:bg-secondary-20:hover   { background: var(--ui-secondary-20) !important; }
+.hover\:bg-secondary-50:hover   { background: var(--ui-secondary-50) !important; }
+.hover\:bg-secondary-60:hover   { background: var(--ui-secondary-60) !important; }
+.hover\:bg-secondary-80:hover   { background: var(--ui-secondary-80) !important; }
+.hover\:bg-secondary-90:hover   { background: var(--ui-secondary-90) !important; }
+.hover\:text-secondary:hover    { color: var(--ui-secondary) !important; }
+.hover\:text-on-secondary:hover { color: var(--ui-on-secondary) !important; }
+
+/* Success */
+.hover\:bg-success:hover      { background: var(--ui-success) !important; }
+.hover\:bg-success-5:hover    { background: var(--ui-success-5) !important; }
+.hover\:bg-success-10:hover   { background: var(--ui-success-10) !important; }
+.hover\:bg-success-20:hover   { background: var(--ui-success-20) !important; }
+.hover\:bg-success-50:hover   { background: var(--ui-success-50) !important; }
+.hover\:bg-success-60:hover   { background: var(--ui-success-60) !important; }
+.hover\:bg-success-80:hover   { background: var(--ui-success-80) !important; }
+.hover\:bg-success-90:hover   { background: var(--ui-success-90) !important; }
+.hover\:text-success:hover    { color: var(--ui-success) !important; }
+.hover\:text-on-success:hover { color: var(--ui-on-success) !important; }
+
+/* Danger */
+.hover\:bg-danger:hover      { background: var(--ui-danger) !important; }
+.hover\:bg-danger-5:hover    { background: var(--ui-danger-5) !important; }
+.hover\:bg-danger-10:hover   { background: var(--ui-danger-10) !important; }
+.hover\:bg-danger-20:hover   { background: var(--ui-danger-20) !important; }
+.hover\:bg-danger-50:hover   { background: var(--ui-danger-50) !important; }
+.hover\:bg-danger-60:hover   { background: var(--ui-danger-60) !important; }
+.hover\:bg-danger-80:hover   { background: var(--ui-danger-80) !important; }
+.hover\:bg-danger-90:hover   { background: var(--ui-danger-90) !important; }
+.hover\:text-danger:hover    { color: var(--ui-danger) !important; }
+.hover\:text-on-danger:hover { color: var(--ui-on-danger) !important; }
+
+/* Warning */
+.hover\:bg-warning:hover      { background: var(--ui-warning) !important; }
+.hover\:bg-warning-5:hover    { background: var(--ui-warning-5) !important; }
+.hover\:bg-warning-10:hover   { background: var(--ui-warning-10) !important; }
+.hover\:bg-warning-20:hover   { background: var(--ui-warning-20) !important; }
+.hover\:bg-warning-50:hover   { background: var(--ui-warning-50) !important; }
+.hover\:bg-warning-60:hover   { background: var(--ui-warning-60) !important; }
+.hover\:bg-warning-80:hover   { background: var(--ui-warning-80) !important; }
+.hover\:bg-warning-90:hover   { background: var(--ui-warning-90) !important; }
+.hover\:text-warning:hover    { color: var(--ui-warning) !important; }
+.hover\:text-on-warning:hover { color: var(--ui-on-warning) !important; }
+
+/* Info */
+.hover\:bg-info:hover      { background: var(--ui-info) !important; }
+.hover\:bg-info-5:hover    { background: var(--ui-info-5) !important; }
+.hover\:bg-info-10:hover   { background: var(--ui-info-10) !important; }
+.hover\:bg-info-20:hover   { background: var(--ui-info-20) !important; }
+.hover\:bg-info-50:hover   { background: var(--ui-info-50) !important; }
+.hover\:bg-info-60:hover   { background: var(--ui-info-60) !important; }
+.hover\:bg-info-80:hover   { background: var(--ui-info-80) !important; }
+.hover\:bg-info-90:hover   { background: var(--ui-info-90) !important; }
+.hover\:text-info:hover    { color: var(--ui-info) !important; }
+.hover\:text-on-info:hover { color: var(--ui-on-info) !important; }
+
+/* Muted, Black, White, Body, Surface (optional) */
+.hover\:bg-muted:hover    { background: var(--ui-muted) !important; }
+.hover\:text-muted:hover  { color: var(--ui-muted) !important; }
+.hover\:bg-black:hover    { background: var(--ui-black) !important; }
+.hover\:text-black:hover  { color: var(--ui-black) !important; }
+.hover\:bg-white:hover    { background: var(--ui-white) !important; }
+.hover\:text-white:hover  { color: var(--ui-white) !important; }
+.hover\:bg-body:hover     { background: var(--ui-body-bg) !important; }
+.hover\:bg-surface:hover  { background: var(--ui-surface) !important; }
+
+/* ======================================================================
+   FOCUS RING UTILITIES – für alle Main-Colors und wichtige Flächen
+====================================================================== */
+.focus-ring-primary:focus    { outline: none !important; box-shadow: 0 0 0 2px var(--ui-primary-20) !important; }
+.focus-ring-secondary:focus  { outline: none !important; box-shadow: 0 0 0 2px var(--ui-secondary-20) !important; }
+.focus-ring-success:focus    { outline: none !important; box-shadow: 0 0 0 2px var(--ui-success-20) !important; }
+.focus-ring-danger:focus     { outline: none !important; box-shadow: 0 0 0 2px var(--ui-danger-20) !important; }
+.focus-ring-warning:focus    { outline: none !important; box-shadow: 0 0 0 2px var(--ui-warning-20) !important; }
+.focus-ring-info:focus       { outline: none !important; box-shadow: 0 0 0 2px var(--ui-info-20) !important; }
+.focus-ring-muted:focus      { outline: none !important; box-shadow: 0 0 0 2px var(--ui-muted) !important; }
+.focus-ring-black:focus      { outline: none !important; box-shadow: 0 0 0 2px var(--ui-black) !important; }
+.focus-ring-white:focus      { outline: none !important; box-shadow: 0 0 0 2px var(--ui-white) !important; }
+.focus-ring-surface:focus    { outline: none !important; box-shadow: 0 0 0 2px var(--ui-surface) !important; }
+.focus-ring-body:focus       { outline: none !important; box-shadow: 0 0 0 2px var(--ui-body-bg) !important; }
+.focus-ring-on-primary:focus    { outline: none !important; box-shadow: 0 0 0 2px var(--ui-on-primary) !important; }
+.focus-ring-on-secondary:focus  { outline: none !important; box-shadow: 0 0 0 2px var(--ui-on-secondary) !important; }
+.focus-ring-on-success:focus    { outline: none !important; box-shadow: 0 0 0 2px var(--ui-on-success) !important; }
+.focus-ring-on-danger:focus     { outline: none !important; box-shadow: 0 0 0 2px var(--ui-on-danger) !important; }
+.focus-ring-on-warning:focus    { outline: none !important; box-shadow: 0 0 0 2px var(--ui-on-warning) !important; }
+.focus-ring-on-info:focus       { outline: none !important; box-shadow: 0 0 0 2px var(--ui-on-info) !important; }

@@ -1,0 +1,22 @@
+{
+  "name": "platform/ui",
+  "description": "Wiederverwendbare UI-Bausteine für Laravel (Buttons, Modals, Sidebars, Navbars)",
+  "type": "library",
+  "license": "MIT",
+  
+  "autoload": {
+    "psr-4": {
+      "Platform\\Ui\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Platform\\Ui\\UiServiceProvider"
+      ]
+    }
+  },
+  "require": {
+    "blade-ui-kit/blade-heroicons": "^2.6"
+  }
+}
