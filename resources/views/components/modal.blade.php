@@ -7,13 +7,11 @@
 ])
 
 @php
-    // Fallback: Wenn size nicht gültig ist, auf "md" setzen
     $validSizes = ['sm', 'md', 'lg', 'full'];
     if (!in_array($size, $validSizes)) {
         $size = 'md';
     }
 
-    // Größenklassen (Tailwind/Tailwind-like Utilitys)
     $sizeClasses = match($size) {
         'sm'   => 'max-w-md max-h-3/5',           // ~448px, 60% Höhe
         'lg'   => 'max-w-7xl max-h-4/5',          // ~1280px, 80% Höhe
@@ -21,7 +19,10 @@
         default => 'max-w-3xl max-h-4/5',         // Standard (~768px)
     };
 
-    // Flags: Wenn persistent, werden ESC und Overlay deaktiviert
+    $modalExtraClasses = $size === 'full'
+        ? 'rounded-0 bg-white'
+        : 'rounded-lg bg-surface';
+
     $canCloseByBackdrop = !$persistent && $backdropClosable;
     $canCloseByEsc = !$persistent && $escClosable;
 @endphp
@@ -44,9 +45,9 @@
 
         <!-- Modal -->
         <div 
-            class="bg-surface rounded-lg shadow-lg w-full p-0 position-relative z-100
+            class="shadow-lg w-full p-0 position-relative z-100
                    d-flex flex-col h-full overflow-hidden
-                   {{ $sizeClasses }}"
+                   {{ $sizeClasses }} {{ $modalExtraClasses }}"
         >
             <!-- Header -->
             @if (trim($header ?? ''))

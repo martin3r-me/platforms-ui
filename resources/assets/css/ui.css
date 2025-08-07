@@ -2258,6 +2258,35 @@ hr {
   margin-right: var(--ui-space-32) !important;
 }
 
+/* ======================================================================
+   MARGIN AUTO UTILITIES
+====================================================================== */
+.ml-auto {
+  margin-left: auto !important;
+}
+
+.mr-auto {
+  margin-right: auto !important;
+}
+
+.mt-auto {
+  margin-top: auto !important;
+}
+
+.mb-auto {
+  margin-bottom: auto !important;
+}
+
+.mx-auto {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.my-auto {
+  margin-top: auto !important;
+  margin-bottom: auto !important;
+}
+
 /* Margin - X (left & right) */
 .mx-0 {
   margin-left: var(--ui-space-0) !important;
@@ -5671,4 +5700,8 @@ legend {
 .bg-blur {
   backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(3px);
+}
+
+.cursor-pointer {
+  cursor: pointer;
 }

@@ -9,6 +9,7 @@ class UiServiceProvider extends ServiceProvider
 {
     public function boot(): void
     {
+        file_put_contents(storage_path('logs/ui-provider-debug.txt'), now()." UiServiceProvider BOOT\n", FILE_APPEND);
         // Views laden & publishen
         $this->loadViewsFrom(__DIR__ . '/../resources/views', 'ui');
 
@@ -31,7 +32,10 @@ class UiServiceProvider extends ServiceProvider
         // Blade-Komponenten registrieren
         Blade::component('ui::components.ui-styles', 'ui-styles');
         Blade::component('ui::components.button', 'ui-button');
+        Blade::component('ui::components.tab', 'ui-tab');
         Blade::component('ui::components.badge', 'ui-badge');
+        Blade::component('ui::components.grouped-list', 'ui-grouped-list');
+        Blade::component('ui::components.grouped-list-item', 'ui-grouped-list-item');
         Blade::component('ui::components.confirm-button', 'ui-confirm-button');
         Blade::component('ui::components.form.input-text', 'ui-input-text');
         Blade::component('ui::components.form.input-textarea', 'ui-input-textarea');
@@ -44,6 +48,24 @@ class UiServiceProvider extends ServiceProvider
         Blade::component('ui::components.kanban.card', 'ui-kanban-card');
         Blade::component('ui::components.toast', 'ui-toast');
         Blade::component('ui::components.label', 'ui-label');
+        Blade::component('ui::components.sidebar', 'ui-sidebar');
+        Blade::component('ui::components.dashboard-tile', 'ui-dashboard-tile');
+
+        $aliases = \Illuminate\Support\Facades\Blade::getClassComponentAliases();
+        file_put_contents(
+            storage_path('logs/ui-provider-debug.txt'),
+            now()." Aktuelle Blade-Class-Aliase: ".json_encode($aliases)."\n",
+            FILE_APPEND
+        );
+
+
+        $sidebarViewExists = view()->exists('ui::components.sidebar');
+        file_put_contents(
+            storage_path('logs/ui-provider-debug.txt'),
+            now()." View 'ui::components.sidebar' exists (Provider-Ende): ".($sidebarViewExists ? 'JA' : 'NEIN')."\n",
+            FILE_APPEND
+        );
+
     }
 
     public function register(): void

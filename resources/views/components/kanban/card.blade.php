@@ -13,19 +13,26 @@
         ]
         : [];
 
+    $interactiveAttributes = $href
+        ? [
+            'x-data' => true,
+            '@click' => '$refs.navlink.click()',
+            'style' => 'cursor: pointer;',
+        ]
+        : [];
+
     $classes = 'rounded-lg p-1 shadow-md bg-white border border-muted mb-1';
+
+    $mergedAttributes = $attributes->merge(
+        array_merge(
+            ['class' => $classes],
+            $sortableAttributes,
+            $interactiveAttributes
+        )
+    );
 @endphp
 
-<div
-    {{ $attributes->merge(array_merge(['class' => $classes], $sortableAttributes)) }}
-    @if($href)
-        x-data
-        @click="
-            $refs.navlink.click()
-        "
-        style="cursor: pointer;"
-    @endif
->
+<div {{ $mergedAttributes }}>
     <!-- Header (nie klickbar) -->
     <div class="px-2 py-1 d-flex">
         <h4 class="text-xs text-muted font-semibold m-0">{{ $title }}</h4>

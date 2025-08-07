@@ -2,8 +2,9 @@
     'title' => 'Unbenannt',
     'footer' => null,
     'scrollable' => true,
-    'sortableId' => null, {{-- ID für die Spalte --}}
+    'sortableId' => null,
 ])
+
 
 <div 
     @if($sortableId)
@@ -17,7 +18,7 @@
         <!-- Header -->
         <div class="p-3 text-md font-semibold uppercase tracking-wide d-flex justify-between items-center">
             {{ $title }}
-            @if($sortableId)
+            
                 <!-- Nur hier: Drag-Handle für die ganze Spalte -->
                 <button wire:sortable.handle class="text-primary" title="Spalte verschieben" style="cursor: grab;">
                     {{-- Du kannst hier statt ☰ auch ein Heroicon, Lucide oder FontAwesome Icon nehmen --}}
@@ -25,7 +26,7 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16" />
                     </svg>
                 </button>
-            @endif
+            
         </div>
 
         <!-- Extra Slot (z. B. Buttons, Filter, Menü) -->
