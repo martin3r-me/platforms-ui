@@ -1,5 +1,5 @@
 @props([
-    'model' => null,
+    'model' => 'modalShow',      // Livewire property name
     'size' => 'md',              // sm, md, lg, full
     'backdropClosable' => true,  // Overlay-Klick erlaubt?
     'escClosable' => true,       // ESC erlaubt?
@@ -28,7 +28,7 @@
 @endphp
 
 <div 
-    x-data="{ modalShow: $wire.entangle('modalShow') }"
+    x-data="{ modalShow: $wire.entangle('{{ $model }}') }"
     x-init="console.log('Init:', modalShow)"
     x-show="modalShow"
     x-cloak
@@ -72,7 +72,7 @@
             </div>
 
             <!-- Footer -->
-            @if (trim($footer ?? ''))
+            @if (isset($footer))
                 <div class="p-4 border-top-1 border-top-solid border-top-muted d-flex justify-end gap-2">
                     {{ $footer }}
                 </div>

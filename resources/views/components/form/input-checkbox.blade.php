@@ -6,6 +6,8 @@
     'size' => 'md', // xs, sm, md, lg
     'disabled' => false,
     'block' => false, // NEU: volle Breite, wenn true
+    'icon' => null, // NEU: Icon für den Button
+    'variant' => 'success', // NEU: success, warning, etc.
 ])
 
 @php
@@ -25,10 +27,15 @@
     @click="if(!{{ $disabled ? 'true' : 'false' }}) checked = !checked"
     x-effect="$wire.set('{{ $model }}', checked)"
     :class="checked
-        ? 'bg-success text-on-success hover:bg-success-80'
-        : 'bg-danger text-on-danger hover:bg-danger-80'"
-    class="rounded-md border-0 transition hover-scale-up shadow-sm font-medium d-inline-flex align-center justify-center {{ $classes }} {{ $disabled ? 'opacity-60 pointer-events-none' : '' }} {{ $blockClass }}"
+        ? 'bg-{{ $variant }} text-on-{{ $variant }} hover:bg-{{ $variant }}-80'
+        : 'bg-transparent border border-{{ $variant }} border-solid text-{{ $variant }} hover:bg-{{ $variant }} hover:text-on-{{ $variant }}'"
+    class="rounded-md border-0 transition hover-scale-up shadow-sm font-medium d-inline-flex align-center justify-center gap-2 {{ $classes }} {{ $disabled ? 'opacity-60 pointer-events-none' : '' }} {{ $blockClass }}"
     :disabled="{{ $disabled ? 'true' : 'false' }}"
 >
+    @if($icon)
+        <div class="flex items-center">
+            {!! $icon !!}
+        </div>
+    @endif
     <span x-text="checked ? '{{ $checkedLabel }}' : '{{ $uncheckedLabel }}'"></span>
 </button>

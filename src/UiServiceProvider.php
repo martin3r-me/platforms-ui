@@ -50,6 +50,12 @@ class UiServiceProvider extends ServiceProvider
         Blade::component('ui::components.label', 'ui-label');
         Blade::component('ui::components.sidebar', 'ui-sidebar');
         Blade::component('ui::components.dashboard-tile', 'ui-dashboard-tile');
+        Blade::component('ui::components.table', 'ui-table');
+        Blade::component('ui::components.table-header', 'ui-table-header');
+        Blade::component('ui::components.table-header-cell', 'ui-table-header-cell');
+        Blade::component('ui::components.table-body', 'ui-table-body');
+        Blade::component('ui::components.table-row', 'ui-table-row');
+        Blade::component('ui::components.table-cell', 'ui-table-cell');
 
         $aliases = \Illuminate\Support\Facades\Blade::getClassComponentAliases();
         file_put_contents(
