@@ -42,6 +42,7 @@ class UiServiceProvider extends ServiceProvider
         Blade::component('ui::components.form.input-checkbox', 'ui-input-checkbox');
         Blade::component('ui::components.form.input-select', 'ui-input-select');
         Blade::component('ui::components.form.input-date', 'ui-input-date');
+        Blade::component('ui::components.form.input-number', 'ui-input-number');
         Blade::component('ui::components.modal', 'ui-modal');
         Blade::component('ui::components.kanban.board', 'ui-kanban-board');
         Blade::component('ui::components.kanban.column', 'ui-kanban-column');

@@ -10,6 +10,8 @@
     'class'      => '',
 ])
 
+
+
 @php
     // Größenklassen für Text und Padding
     $sizeClasses = [
@@ -38,7 +40,7 @@
 
     $rounded = $pill ? 'rounded-full' : 'rounded-md';
     $base = implode(' ', [
-        'inline-flex items-center gap-1 border font-medium select-none',
+        'inline-flex items-center gap-2 border font-medium select-none',
         $sizeClasses[$size] ?? $sizeClasses['md'],
         $variantClasses,
         $rounded,
@@ -51,8 +53,18 @@
     @if($href) href="{{ $href }}" @endif
     {{ $attributes->merge(['class' => $base]) }}
 >
-    @if($icon)
-        <span class="inline-flex {{ $iconSize }} items-center justify-center">{{ $icon }}</span>
+    @if(isset($icon))
+        @if($icon === 'heroicon-o-check-circle')
+            <x-heroicon-o-check-circle :class="$iconSize" />
+        @elseif($icon === 'heroicon-o-play-circle')
+            <x-heroicon-o-play-circle :class="$iconSize" />
+        @elseif($icon === 'heroicon-o-clock')
+            <x-heroicon-o-clock :class="$iconSize" />
+        @else
+            <span class="inline-flex {{ $iconSize }} items-center justify-center">
+                {{ $icon }}
+            </span>
+        @endif
     @endif
 
     @unless($iconOnly)
