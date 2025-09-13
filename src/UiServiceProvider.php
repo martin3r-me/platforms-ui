@@ -50,6 +50,7 @@ class UiServiceProvider extends ServiceProvider
         Blade::component('ui::components.toast', 'ui-toast');
         Blade::component('ui::components.label', 'ui-label');
         Blade::component('ui::components.sidebar', 'ui-sidebar');
+        Blade::component('ui::components.sidebar-module-header', 'sidebar-module-header');
         Blade::component('ui::components.dashboard-tile', 'ui-dashboard-tile');
         Blade::component('ui::components.table', 'ui-table');
         Blade::component('ui::components.table-header', 'ui-table-header');
