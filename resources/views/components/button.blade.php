@@ -5,6 +5,7 @@
     'border' => '1',
     'rounded' => 'md',
     'iconOnly' => false,
+    'href' => null,             // Für Links
 ])
 
 @php
@@ -40,7 +41,6 @@
     }
 
     $classes = implode(' ', array_filter([
-        'btn',
         $bgClass,
         $borderClass,
         $textClass,
@@ -49,13 +49,20 @@
         $roundedClass,
         'flex items-center justify-center transition-colors duration-200',
         $sizeClass,
-        $disabled ? 'disabled opacity-60 pointer-events-none' : '',
+        $disabled ? 'opacity-60 pointer-events-none' : '',
     ]));
 @endphp
 
-<button {{ $attributes->merge(['class' => $classes]) }} @disabled($disabled)>
-    {{-- Alle Icons automatisch skalieren, wenn icon-only --}}
-    <span class="flex items-center justify-center">
-        {{ $iconOnly ? $slot->withAttributes(['class' => trim(($slot->attributes['class'] ?? '') . ' ' . $iconSize)]) : $slot }}
-    </span>
-</button>
+@if($href)
+    <a href="{{ $href }}" {{ $attributes->merge(['class' => $classes]) }} @disabled($disabled)>
+        <span class="flex items-center justify-center">
+            {{ $iconOnly ? $slot->withAttributes(['class' => trim(($slot->attributes['class'] ?? '') . ' ' . $iconSize)]) : $slot }}
+        </span>
+    </a>
+@else
+    <button {{ $attributes->merge(['class' => $classes]) }} @disabled($disabled)>
+        <span class="flex items-center justify-center">
+            {{ $iconOnly ? $slot->withAttributes(['class' => trim(($slot->attributes['class'] ?? '') . ' ' . $iconSize)]) : $slot }}
+        </span>
+    </button>
+@endif
