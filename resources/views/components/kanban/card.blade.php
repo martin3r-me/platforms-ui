@@ -35,7 +35,7 @@
 <div {{ $mergedAttributes }}>
     <!-- Header (nie klickbar) -->
     <div class="px-2 py-1 d-flex">
-        <h4 class="text-xs text-muted font-semibold m-0">{{ $title }}</h4>
+        <h4 class="text-xs text-muted font-semibold m-0">{{ $title }}vollllaaaa</h4>
     </div>
 
     <!-- Body -->
