@@ -39,6 +39,7 @@
     /* ===== Typography ===== */
     --ui-font-sans: {{ config('ui.typography.font_sans') }};
     --ui-font-mono: {{ config('ui.typography.font_mono') }};
+    --ui-font-headings: {{ config('ui.typography.font_headings') }};
     @if(isset(config('ui.typography.size')['md']))
         --ui-text-md: {{ config('ui.typography.size.md') }};
     @endif

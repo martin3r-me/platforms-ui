@@ -1,147 +1,138 @@
 :root {
-  /* ====== Farb-Tokens als RGB für Flexibilität ====== */
-  --ui-primary-rgb:      79,70,229;
-  --ui-secondary-rgb:    107,114,128;
-  --ui-success-rgb:      16,185,129;
-  --ui-danger-rgb:       239,68,68;
-  --ui-warning-rgb:      245,158,11;
-  --ui-info-rgb:         59,130,246;
-  --ui-black-rgb:        31,41,55;
-  --ui-white-rgb:        255,255,255;
-  --ui-muted-rgb:        203,213,225;
-
   /* Hauptfarben */
-  --ui-primary:        rgb(var(--ui-primary-rgb));
-  --ui-secondary:      rgb(var(--ui-secondary-rgb));
-  --ui-success:        rgb(var(--ui-success-rgb));
-  --ui-danger:         rgb(var(--ui-danger-rgb));
-  --ui-warning:        rgb(var(--ui-warning-rgb));
-  --ui-info:           rgb(var(--ui-info-rgb));
-  --ui-black:          rgb(var(--ui-black-rgb));
-  --ui-white:          rgb(var(--ui-white-rgb));
-  --ui-muted:          rgb(var(--ui-muted-rgb));
+  --ui-primary: rgb(var(--ui-primary-rgb));
+  --ui-secondary: rgb(var(--ui-secondary-rgb));
+  --ui-success: rgb(var(--ui-success-rgb));
+  --ui-danger: rgb(var(--ui-danger-rgb));
+  --ui-warning: rgb(var(--ui-warning-rgb));
+  --ui-info: rgb(var(--ui-info-rgb));
+  --ui-black: rgb(var(--ui-black-rgb));
+  --ui-white: rgb(var(--ui-white-rgb));
+  --ui-muted: rgb(var(--ui-muted-rgb));
 
   /* Text-on Farben */
-  --ui-on-primary:     #fff;
-  --ui-on-secondary:   #fff;
-  --ui-on-success:     #fff;
-  --ui-on-danger:      #fff;
-  --ui-on-warning:     #000;
-  --ui-on-info:        #fff;
-  --ui-on-black:       #fff;
-  --ui-on-white:       #111;
-  --ui-on-muted:       #1F2937;
+  --ui-on-primary: #fff;
+  --ui-on-secondary: #fff;
+  --ui-on-success: #fff;
+  --ui-on-danger: #fff;
+  --ui-on-warning: #000;
+  --ui-on-info: #fff;
+  --ui-on-black: #fff;
+  --ui-on-white: #111;
+  --ui-on-muted: #1f2937;
 
-/* ============================================================
+  /* ============================================================
    ALPHA STUFEN (Opacity Abstufungen für alle Main Colors)
 ============================================================ */
 
-/* Primary */
---ui-primary-5:     rgba(var(--ui-primary-rgb),   0.05);
---ui-primary-10:    rgba(var(--ui-primary-rgb),   0.10);
---ui-primary-20:    rgba(var(--ui-primary-rgb),   0.20);
---ui-primary-50:    rgba(var(--ui-primary-rgb),   0.50);
---ui-primary-60:    rgba(var(--ui-primary-rgb),   0.60);
---ui-primary-80:    rgba(var(--ui-primary-rgb),   0.80);
---ui-primary-90:    rgba(var(--ui-primary-rgb),   0.90);
+  /* Primary */
+  --ui-primary-5: rgba(var(--ui-primary-rgb), 0.05);
+  --ui-primary-10: rgba(var(--ui-primary-rgb), 0.1);
+  --ui-primary-20: rgba(var(--ui-primary-rgb), 0.2);
+  --ui-primary-50: rgba(var(--ui-primary-rgb), 0.5);
+  --ui-primary-60: rgba(var(--ui-primary-rgb), 0.6);
+  --ui-primary-80: rgba(var(--ui-primary-rgb), 0.8);
+  --ui-primary-90: rgba(var(--ui-primary-rgb), 0.9);
 
-/* Secondary */
---ui-secondary-5:   rgba(var(--ui-secondary-rgb), 0.05);
---ui-secondary-10:  rgba(var(--ui-secondary-rgb), 0.10);
---ui-secondary-20:  rgba(var(--ui-secondary-rgb), 0.20);
---ui-secondary-50:  rgba(var(--ui-secondary-rgb), 0.50);
---ui-secondary-60:  rgba(var(--ui-secondary-rgb), 0.60);
---ui-secondary-80:  rgba(var(--ui-secondary-rgb), 0.80);
---ui-secondary-90:  rgba(var(--ui-secondary-rgb), 0.90);
+  /* Secondary */
+  --ui-secondary-5: rgba(var(--ui-secondary-rgb), 0.05);
+  --ui-secondary-10: rgba(var(--ui-secondary-rgb), 0.1);
+  --ui-secondary-20: rgba(var(--ui-secondary-rgb), 0.2);
+  --ui-secondary-50: rgba(var(--ui-secondary-rgb), 0.5);
+  --ui-secondary-60: rgba(var(--ui-secondary-rgb), 0.6);
+  --ui-secondary-80: rgba(var(--ui-secondary-rgb), 0.8);
+  --ui-secondary-90: rgba(var(--ui-secondary-rgb), 0.9);
 
-/* Success */
---ui-success-5:     rgba(var(--ui-success-rgb),   0.05);
---ui-success-10:    rgba(var(--ui-success-rgb),   0.10);
---ui-success-20:    rgba(var(--ui-success-rgb),   0.20);
---ui-success-50:    rgba(var(--ui-success-rgb),   0.50);
---ui-success-60:    rgba(var(--ui-success-rgb),   0.60);
---ui-success-80:    rgba(var(--ui-success-rgb),   0.80);
---ui-success-90:    rgba(var(--ui-success-rgb),   0.90);
+  /* Success */
+  --ui-success-5: rgba(var(--ui-success-rgb), 0.05);
+  --ui-success-10: rgba(var(--ui-success-rgb), 0.1);
+  --ui-success-20: rgba(var(--ui-success-rgb), 0.2);
+  --ui-success-50: rgba(var(--ui-success-rgb), 0.5);
+  --ui-success-60: rgba(var(--ui-success-rgb), 0.6);
+  --ui-success-80: rgba(var(--ui-success-rgb), 0.8);
+  --ui-success-90: rgba(var(--ui-success-rgb), 0.9);
 
-/* Danger */
---ui-danger-5:      rgba(var(--ui-danger-rgb),    0.05);
---ui-danger-10:     rgba(var(--ui-danger-rgb),    0.10);
---ui-danger-20:     rgba(var(--ui-danger-rgb),    0.20);
---ui-danger-50:     rgba(var(--ui-danger-rgb),    0.50);
---ui-danger-60:     rgba(var(--ui-danger-rgb),    0.60);
---ui-danger-80:     rgba(var(--ui-danger-rgb),    0.80);
---ui-danger-90:     rgba(var(--ui-danger-rgb),    0.90);
+  /* Danger */
+  --ui-danger-5: rgba(var(--ui-danger-rgb), 0.05);
+  --ui-danger-10: rgba(var(--ui-danger-rgb), 0.1);
+  --ui-danger-20: rgba(var(--ui-danger-rgb), 0.2);
+  --ui-danger-50: rgba(var(--ui-danger-rgb), 0.5);
+  --ui-danger-60: rgba(var(--ui-danger-rgb), 0.6);
+  --ui-danger-80: rgba(var(--ui-danger-rgb), 0.8);
+  --ui-danger-90: rgba(var(--ui-danger-rgb), 0.9);
 
-/* Warning */
---ui-warning-5:     rgba(var(--ui-warning-rgb),   0.05);
---ui-warning-10:    rgba(var(--ui-warning-rgb),   0.10);
---ui-warning-20:    rgba(var(--ui-warning-rgb),   0.20);
---ui-warning-50:    rgba(var(--ui-warning-rgb),   0.50);
---ui-warning-60:    rgba(var(--ui-warning-rgb),   0.60);
---ui-warning-80:    rgba(var(--ui-warning-rgb),   0.80);
---ui-warning-90:    rgba(var(--ui-warning-rgb),   0.90);
+  /* Warning */
+  --ui-warning-5: rgba(var(--ui-warning-rgb), 0.05);
+  --ui-warning-10: rgba(var(--ui-warning-rgb), 0.1);
+  --ui-warning-20: rgba(var(--ui-warning-rgb), 0.2);
+  --ui-warning-50: rgba(var(--ui-warning-rgb), 0.5);
+  --ui-warning-60: rgba(var(--ui-warning-rgb), 0.6);
+  --ui-warning-80: rgba(var(--ui-warning-rgb), 0.8);
+  --ui-warning-90: rgba(var(--ui-warning-rgb), 0.9);
 
-/* Info */
---ui-info-5:        rgba(var(--ui-info-rgb),      0.05);
---ui-info-10:       rgba(var(--ui-info-rgb),      0.10);
---ui-info-20:       rgba(var(--ui-info-rgb),      0.20);
---ui-info-50:       rgba(var(--ui-info-rgb),      0.50);
---ui-info-60:       rgba(var(--ui-info-rgb),      0.60);
---ui-info-80:       rgba(var(--ui-info-rgb),      0.80);
---ui-info-90:       rgba(var(--ui-info-rgb),      0.90);
+  /* Info */
+  --ui-info-5: rgba(var(--ui-info-rgb), 0.05);
+  --ui-info-10: rgba(var(--ui-info-rgb), 0.1);
+  --ui-info-20: rgba(var(--ui-info-rgb), 0.2);
+  --ui-info-50: rgba(var(--ui-info-rgb), 0.5);
+  --ui-info-60: rgba(var(--ui-info-rgb), 0.6);
+  --ui-info-80: rgba(var(--ui-info-rgb), 0.8);
+  --ui-info-90: rgba(var(--ui-info-rgb), 0.9);
 
-/* Muted / Optional */
---ui-muted-5:       rgba(var(--ui-muted-rgb),     0.05);
---ui-muted-10:      rgba(var(--ui-muted-rgb),     0.10);
---ui-muted-20:      rgba(var(--ui-muted-rgb),     0.20);
---ui-muted-50:      rgba(var(--ui-muted-rgb),     0.50);
---ui-muted-60:      rgba(var(--ui-muted-rgb),     0.60);
---ui-muted-80:      rgba(var(--ui-muted-rgb),     0.80);
---ui-muted-90:      rgba(var(--ui-muted-rgb),     0.90);
+  /* Muted / Optional */
+  --ui-muted-5: rgba(var(--ui-muted-rgb), 0.05);
+  --ui-muted-10: rgba(var(--ui-muted-rgb), 0.1);
+  --ui-muted-20: rgba(var(--ui-muted-rgb), 0.2);
+  --ui-muted-50: rgba(var(--ui-muted-rgb), 0.5);
+  --ui-muted-60: rgba(var(--ui-muted-rgb), 0.6);
+  --ui-muted-80: rgba(var(--ui-muted-rgb), 0.8);
+  --ui-muted-90: rgba(var(--ui-muted-rgb), 0.9);
 
-/* Black / White (optional for Overlays etc.) */
---ui-black-5:       rgba(var(--ui-black-rgb),     0.05);
---ui-black-10:      rgba(var(--ui-black-rgb),     0.10);
---ui-black-20:      rgba(var(--ui-black-rgb),     0.20);
---ui-black-50:      rgba(var(--ui-black-rgb),     0.50);
---ui-black-60:      rgba(var(--ui-black-rgb),     0.60);
---ui-black-80:      rgba(var(--ui-black-rgb),     0.80);
---ui-black-90:      rgba(var(--ui-black-rgb),     0.90);
+  /* Black / White (optional for Overlays etc.) */
+  --ui-black-5: rgba(var(--ui-black-rgb), 0.05);
+  --ui-black-10: rgba(var(--ui-black-rgb), 0.1);
+  --ui-black-20: rgba(var(--ui-black-rgb), 0.2);
+  --ui-black-50: rgba(var(--ui-black-rgb), 0.5);
+  --ui-black-60: rgba(var(--ui-black-rgb), 0.6);
+  --ui-black-80: rgba(var(--ui-black-rgb), 0.8);
+  --ui-black-90: rgba(var(--ui-black-rgb), 0.9);
 
---ui-white-5:       rgba(var(--ui-white-rgb),     0.05);
---ui-white-10:      rgba(var(--ui-white-rgb),     0.10);
---ui-white-20:      rgba(var(--ui-white-rgb),     0.20);
---ui-white-50:      rgba(var(--ui-white-rgb),     0.50);
---ui-white-60:      rgba(var(--ui-white-rgb),     0.60);
---ui-white-80:      rgba(var(--ui-white-rgb),     0.80);
---ui-white-90:      rgba(var(--ui-white-rgb),     0.90);
+  --ui-white-5: rgba(var(--ui-white-rgb), 0.05);
+  --ui-white-10: rgba(var(--ui-white-rgb), 0.1);
+  --ui-white-20: rgba(var(--ui-white-rgb), 0.2);
+  --ui-white-50: rgba(var(--ui-white-rgb), 0.5);
+  --ui-white-60: rgba(var(--ui-white-rgb), 0.6);
+  --ui-white-80: rgba(var(--ui-white-rgb), 0.8);
+  --ui-white-90: rgba(var(--ui-white-rgb), 0.9);
 
   /* Surface & Borders */
-  --ui-surface:        #fff;
-  --ui-surface-rgb:    255,255,255;
-  --ui-body-bg:        #F9FAFB;
-  --ui-body-bg-rgb:    249,250,251;
-  --ui-body-color:     #1F2937;
-  --ui-body-color-rgb: 31,41,55;
-  --ui-border:         rgba(0,0,0,.08);
+  --ui-surface: #fff;
+  --ui-surface-rgb: 255, 255, 255;
+  --ui-body-bg: #f9fafb;
+  --ui-body-bg-rgb: 249, 250, 251;
+  --ui-body-color: #1f2937;
+  --ui-body-color-rgb: 31, 41, 55;
+  --ui-border: rgba(0, 0, 0, 0.08);
 
   /* ====== Typography ====== */
-  --ui-font-sans:      system-ui,-apple-system,'Segoe UI',sans-serif;
-  --ui-font-mono:      ui-monospace,'SFMono-Regular',monospace;
+  --ui-font-sans: "Satoshi", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --ui-font-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", monospace;
+  --ui-font-headings: "JetBrains Mono", ui-monospace, "SFMono-Regular",
+    monospace;
 
-  --ui-text-xs:        0.75rem;   /* 12px */
-  --ui-text-sm:        0.875rem;  /* 14px */
-  --ui-text-md:        1rem;      /* 16px */
-  --ui-text-lg:        1.125rem;  /* 18px */
-  --ui-text-xl:        1.25rem;   /* 20px */
-  --ui-text-2xl:       1.5rem;    /* 24px */
+  --ui-text-xs: 0.75rem; /* 12px */
+  --ui-text-sm: 0.875rem; /* 14px */
+  --ui-text-md: 1rem; /* 16px */
+  --ui-text-lg: 1.125rem; /* 18px */
+  --ui-text-xl: 1.25rem; /* 20px */
+  --ui-text-2xl: 1.5rem; /* 24px */
 
-  --ui-font-bold:      700;
-  --ui-font-semibold:  600;
-  --ui-font-medium:    500;
-  --ui-font-normal:    400;
+  --ui-font-bold: 700;
+  --ui-font-semibold: 600;
+  --ui-font-medium: 500;
+  --ui-font-normal: 400;
 
-  --ui-leading-tight:  1.2;
+  --ui-leading-tight: 1.2;
   --ui-leading-normal: 1.5;
 
   /* ====== Radius ====== */
@@ -153,20 +144,20 @@
   --ui-radius-full: 9999px;
 
   /* ====== Spacing ====== */
-  --ui-space-0:   0;
-  --ui-space-1:   0.25rem;
-  --ui-space-2:   0.5rem;
-  --ui-space-3:   0.75rem;
-  --ui-space-4:   1rem;
-  --ui-space-5:   1.25rem;
-  --ui-space-6:   1.5rem;
-  --ui-space-8:   2rem;
-  --ui-space-10:  2.5rem;
-  --ui-space-12:  3rem;
-  --ui-space-16:  4rem;
-  --ui-space-20:  5rem;
-  --ui-space-24:  6rem;
-  --ui-space-32:  8rem;
+  --ui-space-0: 0;
+  --ui-space-1: 0.25rem;
+  --ui-space-2: 0.5rem;
+  --ui-space-3: 0.75rem;
+  --ui-space-4: 1rem;
+  --ui-space-5: 1.25rem;
+  --ui-space-6: 1.5rem;
+  --ui-space-8: 2rem;
+  --ui-space-10: 2.5rem;
+  --ui-space-12: 3rem;
+  --ui-space-16: 4rem;
+  --ui-space-20: 5rem;
+  --ui-space-24: 6rem;
+  --ui-space-32: 8rem;
 
   /* ====== Breakpoints ====== */
   --ui-break-xs: 480px;
@@ -177,15 +168,15 @@
   --ui-break-2xl: 1536px;
 
   /* ====== Z-Index Tokens ====== */
-  --ui-z-base:    0;
-  --ui-z-dropdown:10;
-  --ui-z-navbar:  50;
-  --ui-z-modal:   100;
+  --ui-z-base: 0;
+  --ui-z-dropdown: 10;
+  --ui-z-navbar: 50;
+  --ui-z-modal: 100;
   --ui-z-tooltip: 150;
 
   /* ====== Shadow Tokens ====== */
-  --ui-shadow-xs: 0 1px 2px 0 rgba(0,0,0,.04);
-  --ui-shadow-sm: 0 1px 3px 0 rgba(0,0,0,.10);
-  --ui-shadow-md: 0 4px 6px -1px rgba(0,0,0,.08);
-  --ui-shadow-lg: 0 10px 15px -3px rgba(0,0,0,.10);
+  --ui-shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.04);
+  --ui-shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+  --ui-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.08);
+  --ui-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
 }

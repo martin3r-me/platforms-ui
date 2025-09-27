@@ -30,8 +30,9 @@ return [
 
     // ===== Typography =====
     'typography' => [
-        'font_sans' => env('UI_FONT_SANS', "system-ui, -apple-system, 'Segoe UI', sans-serif"),
-        'font_mono' => env('UI_FONT_MONO', "ui-monospace, 'SFMono-Regular', monospace"),
+        'font_sans' => env('UI_FONT_SANS', "'Satoshi', system-ui, -apple-system, 'Segoe UI', sans-serif"),
+        'font_mono' => env('UI_FONT_MONO', "'JetBrains Mono', ui-monospace, 'SFMono-Regular', monospace"),
+        'font_headings' => env('UI_FONT_HEADINGS', "'JetBrains Mono', ui-monospace, 'SFMono-Regular', monospace"),
         'size' => [
             'xs'   => '0.75rem',    // 12px
             'sm'   => '0.875rem',   // 14px

@@ -1,43 +1,160 @@
 /* Gaps */
-.gap-0  { gap: var(--ui-space-0) !important; }
-.gap-1  { gap: var(--ui-space-1) !important; }
-.gap-2  { gap: var(--ui-space-2) !important; }
-.gap-3  { gap: var(--ui-space-3) !important; }
-.gap-4  { gap: var(--ui-space-4) !important; }
-.gap-5  { gap: var(--ui-space-5) !important; }
-.gap-6  { gap: var(--ui-space-6) !important; }
-.gap-8  { gap: var(--ui-space-8) !important; }
-.gap-10 { gap: var(--ui-space-10) !important; }
-.gap-12 { gap: var(--ui-space-12) !important; }
-.gap-16 { gap: var(--ui-space-16) !important; }
-.gap-20 { gap: var(--ui-space-20) !important; }
-.gap-24 { gap: var(--ui-space-24) !important; }
-.gap-32 { gap: var(--ui-space-32) !important; }
+.gap-0 {
+  gap: var(--ui-space-0) !important;
+}
+.gap-1 {
+  gap: var(--ui-space-1) !important;
+}
+.gap-2 {
+  gap: var(--ui-space-2) !important;
+}
+.gap-3 {
+  gap: var(--ui-space-3) !important;
+}
+.gap-4 {
+  gap: var(--ui-space-4) !important;
+}
+.gap-5 {
+  gap: var(--ui-space-5) !important;
+}
+.gap-6 {
+  gap: var(--ui-space-6) !important;
+}
+.gap-8 {
+  gap: var(--ui-space-8) !important;
+}
+.gap-10 {
+  gap: var(--ui-space-10) !important;
+}
+.gap-12 {
+  gap: var(--ui-space-12) !important;
+}
+.gap-16 {
+  gap: var(--ui-space-16) !important;
+}
+.gap-20 {
+  gap: var(--ui-space-20) !important;
+}
+.gap-24 {
+  gap: var(--ui-space-24) !important;
+}
+.gap-32 {
+  gap: var(--ui-space-32) !important;
+}
 
-.gap-x-1  { column-gap: var(--ui-space-1) !important; }
-.gap-x-2  { column-gap: var(--ui-space-2) !important; }
-.gap-x-3  { column-gap: var(--ui-space-3) !important; }
-.gap-x-4  { column-gap: var(--ui-space-4) !important; }
-.gap-x-5  { column-gap: var(--ui-space-5) !important; }
-.gap-x-6  { column-gap: var(--ui-space-6) !important; }
-.gap-x-8  { column-gap: var(--ui-space-8) !important; }
-.gap-x-10 { column-gap: var(--ui-space-10) !important; }
-.gap-x-12 { column-gap: var(--ui-space-12) !important; }
-.gap-x-16 { column-gap: var(--ui-space-16) !important; }
-.gap-x-20 { column-gap: var(--ui-space-20) !important; }
-.gap-x-24 { column-gap: var(--ui-space-24) !important; }
-.gap-x-32 { column-gap: var(--ui-space-32) !important; }
+.gap-x-1 {
+  column-gap: var(--ui-space-1) !important;
+}
+.gap-x-2 {
+  column-gap: var(--ui-space-2) !important;
+}
+.gap-x-3 {
+  column-gap: var(--ui-space-3) !important;
+}
+.gap-x-4 {
+  column-gap: var(--ui-space-4) !important;
+}
+.gap-x-5 {
+  column-gap: var(--ui-space-5) !important;
+}
+.gap-x-6 {
+  column-gap: var(--ui-space-6) !important;
+}
+.gap-x-8 {
+  column-gap: var(--ui-space-8) !important;
+}
+.gap-x-10 {
+  column-gap: var(--ui-space-10) !important;
+}
+.gap-x-12 {
+  column-gap: var(--ui-space-12) !important;
+}
+.gap-x-16 {
+  column-gap: var(--ui-space-16) !important;
+}
+.gap-x-20 {
+  column-gap: var(--ui-space-20) !important;
+}
+.gap-x-24 {
+  column-gap: var(--ui-space-24) !important;
+}
+.gap-x-32 {
+  column-gap: var(--ui-space-32) !important;
+}
 
-.gap-y-1  { row-gap: var(--ui-space-1) !important; }
-.gap-y-2  { row-gap: var(--ui-space-2) !important; }
-.gap-y-3  { row-gap: var(--ui-space-3) !important; }
-.gap-y-4  { row-gap: var(--ui-space-4) !important; }
-.gap-y-5  { row-gap: var(--ui-space-5) !important; }
-.gap-y-6  { row-gap: var(--ui-space-6) !important; }
-.gap-y-8  { row-gap: var(--ui-space-8) !important; }
-.gap-y-10 { row-gap: var(--ui-space-10) !important; }
-.gap-y-12 { row-gap: var(--ui-space-12) !important; }
-.gap-y-16 { row-gap: var(--ui-space-16) !important; }
-.gap-y-20 { row-gap: var(--ui-space-20) !important; }
-.gap-y-24 { row-gap: var(--ui-space-24) !important; }
-.gap-y-32 { row-gap: var(--ui-space-32) !important; }
+.gap-y-1 {
+  row-gap: var(--ui-space-1) !important;
+}
+.gap-y-2 {
+  row-gap: var(--ui-space-2) !important;
+}
+.gap-y-3 {
+  row-gap: var(--ui-space-3) !important;
+}
+.gap-y-4 {
+  row-gap: var(--ui-space-4) !important;
+}
+.gap-y-5 {
+  row-gap: var(--ui-space-5) !important;
+}
+.gap-y-6 {
+  row-gap: var(--ui-space-6) !important;
+}
+.gap-y-8 {
+  row-gap: var(--ui-space-8) !important;
+}
+.gap-y-10 {
+  row-gap: var(--ui-space-10) !important;
+}
+.gap-y-12 {
+  row-gap: var(--ui-space-12) !important;
+}
+.gap-y-16 {
+  row-gap: var(--ui-space-16) !important;
+}
+.gap-y-20 {
+  row-gap: var(--ui-space-20) !important;
+}
+.gap-y-24 {
+  row-gap: var(--ui-space-24) !important;
+}
+.gap-y-32 {
+  row-gap: var(--ui-space-32) !important;
+}
+
+/* ==============================================================
+   SPACE BETWEEN SIBLINGS (wie Tailwind: space-x-*, space-y-*)
+   Nutzt CSS-Variablen für Reverse-Unterstützung
+   ============================================================= */
+
+/* Reverse-Flags */
+.space-x-reverse {
+  --ui-space-x-reverse: 1;
+}
+.space-y-reverse {
+  --ui-space-y-reverse: 1;
+}
+
+@each $n in 0, 1, 2, 3, 4, 5, 6, 8, 10, 12, 16, 20, 24, 32 {
+  /* Horizontaler Abstand zwischen Geschwistern */
+  .space-x-#{$n} {
+    --ui-space-x-reverse: 0;
+  }
+  .space-x-#{$n} > :not([hidden]) ~ :not([hidden]) {
+    margin-right: calc(var(--ui-space-#{$n}) * var(--ui-space-x-reverse));
+    margin-left: calc(
+      var(--ui-space-#{$n}) * calc(1 - var(--ui-space-x-reverse))
+    );
+  }
+
+  /* Vertikaler Abstand zwischen Geschwistern */
+  .space-y-#{$n} {
+    --ui-space-y-reverse: 0;
+  }
+  .space-y-#{$n} > :not([hidden]) ~ :not([hidden]) {
+    margin-top: calc(
+      var(--ui-space-#{$n}) * calc(1 - var(--ui-space-y-reverse))
+    );
+    margin-bottom: calc(var(--ui-space-#{$n}) * var(--ui-space-y-reverse));
+  }
+}
