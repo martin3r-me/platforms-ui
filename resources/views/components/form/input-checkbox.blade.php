@@ -1,3 +1,14 @@
+@props([
+    'model' => null,
+    'checkedLabel' => 'Aktiviert',
+    'uncheckedLabel' => 'Deaktiviert',
+    'size' => 'md',
+    'disabled' => false,
+    'block' => false,
+    'icon' => null,
+    'variant' => 'primary',
+])
+
 {{-- Wrapper: Weiterleitung auf neue Atomic-Komponente --}}
 <x-ui-checkbox
     {{ $attributes }}
