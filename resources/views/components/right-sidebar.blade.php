@@ -1,8 +1,8 @@
 <div x-data="rightSidebarState()" x-init="init()" class="d-flex">
     <aside 
         x-cloak
-        :class="collapsed ? 'w-16' : 'w-96'"
-        class="relative flex-shrink-0 h-full bg-white border-left-1 border-left-solid border-muted transition-all duration-300 d-flex flex-col"
+        :class="collapsed ? 'w-16 is-collapsed' : 'w-96 is-expanded'"
+        class="relative flex-shrink-0 h-full bg-white border-left-1 border-left-solid border-muted transition-all duration-300 d-flex flex-col overflow-x-hidden"
     >
         <!-- Toggle -->
         <div class="sticky top-0 z-10 bg-white border-bottom-1 border-muted">
@@ -29,10 +29,12 @@ function rightSidebarState() {
         collapsed: false,
         init() {
             this.collapsed = localStorage.getItem('sidebar-cursor-collapsed') === 'true';
+            window.dispatchEvent(new CustomEvent('ui:right-sidebar-toggle', { detail: { collapsed: this.collapsed } }));
         },
         toggle() {
             this.collapsed = !this.collapsed;
             localStorage.setItem('sidebar-cursor-collapsed', this.collapsed);
+            window.dispatchEvent(new CustomEvent('ui:right-sidebar-toggle', { detail: { collapsed: this.collapsed } }));
         }
     }
 }

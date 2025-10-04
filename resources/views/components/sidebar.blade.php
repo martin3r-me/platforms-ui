@@ -1,19 +1,55 @@
 <div x-data="sidebarState()" x-init="init()" class="d-flex">
     <aside 
         x-cloak
-        :class="collapsed ? 'w-16' : 'w-80'" 
-        class="relative flex-shrink-0 h-full bg-white border-right-1 border-right-solid border-muted transition-all duration-300 d-flex flex-col"
+        :class="collapsed ? 'w-16' : 'w-72'" 
+        class="relative flex-shrink-0 h-full bg-black border-right-1 border-right-solid border-muted transition-all duration-300 d-flex flex-col"
     >
-        <!-- Toggle -->
-        <div class="sticky top-0 z-10 bg-white border-bottom-1 border-muted">
+        <!-- Toggle Button -->
+        <div class="sticky top-0 z-10 bg-black border-bottom-1 border-muted p-2">
             <button 
                 @click="toggle()" 
-                class="w-full p-3 d-flex items-center justify-center bg-primary-10 transition"
+                class="d-flex items-center justify-center transition bg-black hover:bg-gray-800"
+                :class="collapsed ? 'w-12' : 'w-full'"
                 title="Sidebar umschalten"
             >
-                <x-heroicon-o-chevron-double-left x-show="!collapsed" class="w-6 h-6 text-primary" />
-                <x-heroicon-o-chevron-double-right x-show="collapsed" class="w-6 h-6 text-primary" />
+                @svg('heroicon-o-bars-3', 'w-6 h-6 text-white')
             </button>
+        </div>
+
+        <!-- Quick Actions (nur wenn nicht collapsed) -->
+        <div x-show="!collapsed" class="p-2 border-bottom-1 border-muted">
+            <div class="d-flex flex-col gap-1" style="padding: 2px;">
+                <button 
+                    @click="$dispatch('open-modal-modules', { tab: 'modules' })"
+                    class="w-full text-left px-3 py-2 hover:bg-gray-800 text-sm d-flex items-center text-white"
+                >
+                    @svg('heroicon-o-cube', 'w-4 h-4 mr-2 text-white') Module
+                </button>
+                <button 
+                    @click="$dispatch('open-modal-modules', { tab: 'team' })"
+                    class="w-full text-left px-3 py-2 hover:bg-gray-800 text-sm d-flex items-center text-white"
+                >
+                    @svg('heroicon-o-users', 'w-4 h-4 mr-2 text-white') Team
+                </button>
+                <button 
+                    @click="$dispatch('open-modal-modules', { tab: 'account' })"
+                    class="w-full text-left px-3 py-2 hover:bg-gray-800 text-sm d-flex items-center text-white"
+                >
+                    @svg('heroicon-o-user', 'w-4 h-4 mr-2 text-white') Konto
+                </button>
+                <button 
+                    @click="$dispatch('open-modal-modules', { tab: 'billing' })"
+                    class="w-full text-left px-3 py-2 hover:bg-gray-800 text-sm d-flex items-center text-white"
+                >
+                    @svg('heroicon-o-credit-card', 'w-4 h-4 mr-2 text-white') Abrechnung
+                </button>
+                <button 
+                    @click="$dispatch('open-modal-modules', { tab: 'matrix' })"
+                    class="w-full text-left px-3 py-2 hover:bg-gray-800 text-sm d-flex items-center text-white"
+                >
+                    @svg('heroicon-o-table-cells', 'w-4 h-4 mr-2 text-white') Matrix
+                </button>
+            </div>
         </div>
 
         <!-- Navigation -->
@@ -29,6 +65,10 @@ function sidebarState() {
         collapsed: false,
         init() {
             this.collapsed = localStorage.getItem('sidebar-collapsed') === 'true';
+            // Event-Listener für das Grid-Icon
+            this.$el.addEventListener('toggle-sidebar', () => {
+                this.toggle();
+            });
         },
         toggle() {
             this.collapsed = !this.collapsed;

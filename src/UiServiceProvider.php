@@ -59,6 +59,7 @@ class UiServiceProvider extends ServiceProvider
         Blade::component('ui::components.table-body', 'ui-table-body');
         Blade::component('ui::components.table-row', 'ui-table-row');
         Blade::component('ui::components.table-cell', 'ui-table-cell');
+        Blade::component('ui::components.task-layout', 'ui-task-layout');
 
         $aliases = \Illuminate\Support\Facades\Blade::getClassComponentAliases();
         file_put_contents(
