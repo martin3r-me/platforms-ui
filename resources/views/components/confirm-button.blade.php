@@ -21,4 +21,5 @@ Zweck: Weiterleitung auf neue Atom-Komponente für Rückwärtskompatibilität
     :variant="$variant"
     :icon="$icon"
     :class="$class"
+    {{ $attributes->only(['wire:click', 'size']) }}
 />

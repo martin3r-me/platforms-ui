@@ -24,6 +24,17 @@ Beispiel: <x-ui-confirm-button action="deleteTask" text="Löschen" confirmText="
         'secondary' => 'secondary',
         default => 'danger'
     };
+
+    // Support wire:click as fallback for action prop
+    if (empty($action) && $attributes->has('wire:click')) {
+        $wireClick = $attributes->get('wire:click');
+        if (preg_match('/^(\w+)\((.+)\)$/', $wireClick, $m)) {
+            $action = $m[1];
+            $value = $value ?? $m[2];
+        } else {
+            $action = $wireClick;
+        }
+    }
 @endphp
 
 <x-ui-button
